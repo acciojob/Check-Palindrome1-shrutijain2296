@@ -1,22 +1,23 @@
 // complete the given function
 
 function palindrome(str){
+
+	let str1 = str.toLowerCase()
 	let isPalindrome = true;
-	let i = 0, j = str.length-1;
+	let i = 0, j = str1.length-1;
 	while(i <= j && isPalindrome){
-		if(str[i] != str[j]){
-			isPalindrome = false;
-			return;
+		if(str1[i] != str1[j]){
+			return false;
 		}
-		if(str[i] === ' '){
+		if(str1[i] === ' '){
 			i++;
 		}
-		if(str[j] === ' '){
+		if(str1[j] === ' '){
 			j--;
 		}
 		i++;
 		j--;
 	}
-	console.log(isPalindrome ? "Palindrome : Not a Palindrome")
+	return true;
 }
 module.exports = palindrome
