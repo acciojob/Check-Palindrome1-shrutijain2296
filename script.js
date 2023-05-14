@@ -6,6 +6,13 @@ function palindrome(str){
 	while(i <= j && isPalindrome){
 		if(str[i] != str[j]){
 			isPalindrome = false;
+			return;
+		}
+		if(str[i] === ' '){
+			i++;
+		}
+		if(str[j] === ' '){
+			j--;
 		}
 		i++;
 		j--;
