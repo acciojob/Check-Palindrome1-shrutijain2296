@@ -1,8 +1,8 @@
 // complete the given function
 
 function palindrome(str){
-
-	let stringWithoutSpaces = str.split(" ").join("");
+	let str1 = str.toLowerCase();
+	let stringWithoutSpaces = str1.split(" ").join("");
 	// let isPalindrome = true;
 	let i = 0, j = stringWithoutSpaces.length-1;
 	while(i <= j){
