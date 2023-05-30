@@ -2,21 +2,17 @@
 
 function palindrome(str){
 
-	let str1 = str.toLowerCase()
+	let stringWithoutSpaces = str.split(" ").join("");
 	// let isPalindrome = true;
-	let i = 0, j = str1.length-1;
+	let i = 0, j = stringWithoutSpaces.length-1;
 	while(i <= j){
-		if(str1[i] != str1[j]){
+		if(stringWithoutSpaces.charAt(i) !== stringWithoutSpaces.charAt(j)){
 			return false;
 		}
-		if(str1[i] === ' '){
+		else{
 			i++;
-		}
-		if(str1[j] === ' '){
 			j--;
 		}
-		i++;
-		j--;
 	}
 	return true;
 }
